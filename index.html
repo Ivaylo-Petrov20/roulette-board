@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roulette</title>
+
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="panel">
+        <div class="board">
+            <div class="zero-container">0</div>
+            <div class="first-sector">
+                <p class="red-number">3</p>
+                <p class="black-number">6</p>
+                <p class="red-number">9</p>
+                <p class="red-number">12</p>
+
+                <p class="black-number">2</p>
+                <p class="red-number">5</p>
+                <p class="black-number">8</p>
+                <p class="black-number">11</p>
+
+                <p class="red-number">1</p>
+                <p class="black-number">4</p>
+                <p class="red-number">7</p>
+                <p class="black-number">10</p>
+            </div>
+            <div class="second-sector">
+                <p class="black-number">15</p>
+                <p class="red-number">18</p>
+                <p class="red-number">21</p>
+                <p class="black-number">24</p>
+
+                <p class="red-number">14</p>
+                <p class="black-number">17</p>
+                <p class="black-number">20</p>
+                <p class="red-number">23</p>
+
+                <p class="black-number">13</p>
+                <p class="red-number">16</p>
+                <p class="red-number">19</p>
+                <p class="black-number">22</p>
+            </div>
+            <div class="third-sector">
+                <p class="red-number">27</p>
+                <p class="red-number">30</p>
+                <p class="black-number">33</p>
+                <p class="red-number">36</p>
+
+                <p class="black-number">26</p>
+                <p class="black-number">29</p>
+                <p class="red-number">32</p>
+                <p class="black-number">35</p>
+
+                <p class="red-number">25</p>
+                <p class="black-number">28</p>
+                <p class="black-number">31</p>
+                <p class="red-number">34</p>
+            </div>
+            <div class="ratio-container">
+                <p>2:1</p>
+                <p>2:1</p>
+                <p>2:1</p>
+            </div>
+            <div class="first-sector-heading">
+                <p>1ви 12</p>
+                <div class="first-sector-details">
+                    <p class="first-half">1-18</p>
+                    <p class="even">ЧЕТНО</p>
+                </div>
+            </div>
+            <div class="second-sector-heading">
+                <p>2ри 12</p>
+                <div class="second-sector-details">
+                    <p class="red-color">ЧЕРВЕНО</p>
+                    <p class="black-color">ЧЕРНО</p>
+                </div>
+            </div>
+            <div class="third-sector-heading">
+                <p>3ти 12</p>
+                <div class="third-sector-details">
+                    <p class="odd">НЕЧЕТНО</p>
+                    <p class="second-half">19-36</p>
+                </div>
+            </div>
+            <div class="chip-cursor chip-2" style="display: none;">2</div>
+        </div>
+        <div class="interface">
+            <div class="btn icon-undo"><img src="assets/images/btn-undo.png" alt=""></div>
+            <div class="btn icon-clear"><img src="assets/images/btn-clear.png" alt=""></div>
+            <div class="btn icon-double"><img src="assets/images/btn-x2.png" alt=""></div>
+            <div class="chips">
+                <div class="chip chip-1 active">1</div>
+                <div class="chip chip-2">2</div>
+                <div class="chip chip-3">5</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/managers/bet.js"></script>
+    <script src="js/components/board.js"></script>
+    <script src="js/components/button.js"></script>
+    <script src="js/components/chips.js"></script>
+    <script src="js/app.js"></script>
+
+    <script>
+        var app = new App(document.querySelector(".panel"));
+    </script>
+</body>
+
+</html>

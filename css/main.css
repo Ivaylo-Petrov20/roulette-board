@@ -1,0 +1,338 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+}
+
+.panel {
+    margin-top: 100px;
+}
+
+.interface {
+    display: flex;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.heading{
+    text-align: center;
+}
+
+.board {
+    display: flex;
+    align-items: top;
+    flex-wrap: wrap;
+    position: relative;
+    width: 600px;
+    height: 175px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.board p{
+    color: white;
+    margin: 0;
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 8px;
+}
+
+.zero-container{
+    display: inline-block;
+    font-size: 22px;
+    line-height: 110px;
+    height: 109px;
+    width: 130px;
+    border-radius: 65px;
+    padding-left: 30px;
+    background-color: #158115e3;
+    border: 1px solid black;
+    color: white;
+    margin-left: 0;
+    overflow: hidden;
+}
+
+.first-sector,
+.second-sector,
+.third-sector{
+    width: 25%;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 110px;
+}
+
+.ratio-container p{
+    color: black;
+    font-size: 11px;
+    padding: 10.85px;
+}
+
+.first-sector{
+    margin-left: -100px;
+}
+
+
+.red-number{
+    background-color: red;
+}
+
+.black-number{
+    background-color: black;
+}
+
+.first-sector-heading{
+    display: inline-block;
+    width: 25%;
+    margin-left: 62px;
+}
+
+.second-sector-heading{
+    display: inline-block;
+    width: 25.3%;
+    margin-left: -1px;
+}
+
+.third-sector-heading{
+    display: inline-block;
+    width: 25%;
+    margin-left: -1px;
+}
+
+.first-sector-heading,
+.second-sector-heading,
+.third-sector-heading{
+    margin-top: -1px;
+}
+
+.first-sector-heading p,
+.second-sector-heading p,
+.third-sector-heading p{
+    color: black;
+    font-size: 13px;
+}
+
+.first-sector-details,
+.second-sector-details,
+.third-sector-details{
+    display: flex;
+    margin-top: -1px;
+}
+
+
+.first-half,
+.even,
+.odd,
+.second-half{
+    width: 38%;
+}
+
+.red-color,
+.black-color{
+    width: 39%;
+}
+
+.chips {
+    display: flex;
+    margin-left: 50px;
+}
+
+.chip {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 60px;
+    font-weight: bold;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    margin: 0 5px;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.cells-row {
+    display: flex;
+    height: 30px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #000;
+    text-align: center;
+    font-size: 14px;
+    line-height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.cell.black {
+    background: #000;
+    color: #fff;
+}
+
+.cell.red {
+    background: #ff0000;
+    color: #fff;
+}
+
+.cell.special {
+    font-size: 11px;
+}
+
+.cell:hover {
+    background: #ccc;
+}
+
+.cell-2 {
+    width: 60px;
+}
+
+.cell-4 {
+    width: 120px;
+}
+
+.chip.active {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+.btn {
+    transition: all .4s none;
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.chip.chip-0 {
+    background-image: url("../assets/images/chip-background-0.png");
+}
+
+.chip.chip-1 {
+    background-image: url("../assets/images/chip-background-1.png");
+}
+
+.chip.chip-2 {
+    background-image: url("../assets/images/chip-background-2.png");
+}
+
+.chip.chip-3 {
+    background-image: url("../assets/images/chip-background-3.png");
+}
+
+.chip-cursor {
+    position: absolute;
+    width: 20px;
+    height: 22px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: cover;
+    text-align: center;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.chip-cursor.chip-0 {
+    background-image: url("../assets/images/chip-background-small-0.png");
+}
+
+.chip-cursor.chip-1 {
+    background-image: url("../assets/images/chip-background-small-1.png");
+}
+
+.chip-cursor.chip-2 {
+    background-image: url("../assets/images/chip-background-small-2.png");
+}
+
+.chip-cursor.chip-3 {
+    background-image: url("../assets/images/chip-background-small-3.png");
+}
+
+.chip-placed-1{
+    background-image: url('../assets/images/chip-background-small-1.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+.chip-placed-1-zero{
+    background-image: url('../assets/images/chip-background-small-1.png');
+    background-position: 20%;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+
+.chip-placed-2{
+    background-image: url('../assets/images/chip-background-small-2.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+.chip-placed-2-zero{
+    background-image: url('../assets/images/chip-background-small-2.png');
+    background-position: 20%;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+.chip-placed-3{
+    background-image: url('../assets/images/chip-background-small-3.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+.chip-placed-3-zero{
+    background-image: url('../assets/images/chip-background-small-3.png');
+    background-position: 20%;
+    background-repeat: no-repeat;
+    text-indent: -9999px; 
+}
+
+@media (max-width: 450px){
+    .board{
+        transform: rotate(90deg);
+        margin-top: 300px;
+        margin-left: -150px;
+        float: inline-start;
+    }
+    .chips{
+        transform: rotate(90deg);
+        justify-content: right;
+        margin-right: 200px;
+        margin-top: -250px;
+        justify-content: left;
+    }
+    .first-sector p,
+    .second-sector p,
+    .third-sector p,
+    .ratio-container p{
+        margin-top: -1px;
+        transform: rotate(-0.25turn);
+
+    }
+    .interface {
+        margin-top: 200px;
+        display: flex;
+        justify-content: right;
+    }
+    .chip.chip-1,
+    .chip.chip-2,
+    .chip.chip-3{
+        transform: rotate(-0.25turn);
+        margin-left: -150px;
+    }
+    .btn.icon-undo,
+    .btn.icon-clear,
+    .btn.icon-double{
+        margin: 10px;
+    }
+}
